@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMKN 1 JETIS MOJOKERTO</title>
+    <link
+      rel="icon"
+      href="https://dindik.jatimprov.go.id/pak/images/foto/d0ec693900068c4c4890f179c3e064dalogo%20smk.png"
+    />
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css" />
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+    />
+    <!-- iCheck -->
+    <link
+      rel="stylesheet"
+      href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css" />
+    <!-- overlayScrollbars -->
+    <link
+      rel="stylesheet"
+      href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+    />
+    <!-- Daterange picker -->
+    <link
+      rel="stylesheet"
+      href="../plugins/daterangepicker/daterangepicker.css"
+    />
+    <!-- summernote -->
+    <link
+      rel="stylesheet"
+      href="../plugins/summernote/summernote-bs4.min.css"
+    />
+    <style scoped>
+      .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #00b4db, #0083b0);
+        font-family: "Poppins", sans-serif;
+      }
+
+      .login-card {
+        width: 350px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .login-header {
+        text-align: center;
+        padding: 30px 0;
+        background-color: #00b4db;
+        color: #fff;
+      }
+
+      .login-heading {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .profile-img-card {
+        width: 100px;
+        height: 100px;
+        border-radius: 0%;
+        margin: 0 auto 20px;
+      }
+
+      .login-form {
+        padding: 0 20px 30px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group {
+        position: relative;
+        margin-top: 15px;
+      }
+
+      .input-group-text {
+        background-color: #f0f0f0;
+      }
+
+      .error-feedback {
+        color: #dc3545;
+      }
+
+      .form-control {
+        padding-left: 30px;
+        color: #333;
+      }
+
+      .btn-primary {
+        background-color: #00b4db;
+        border-color: #00b4db;
+        width: 100%;
+        padding: 12px 0;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #0083b0;
+        border-color: #0083b0;
+      }
+
+      .login-button {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .login-text {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .login-button:hover .login-text {
+        transform: translateY(-5px);
+      }
+
+      .alert {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <img
+            id="profile-img"
+            src="https://dindik.jatimprov.go.id/pak/images/foto/d0ec693900068c4c4890f179c3e064dalogo%20smk.png"
+            class="profile-img-card"
+          />
+          <h2 class="login-heading">SMKN 1 JETIS MOJOKERTO</h2>
+        </div>
+        <form class="login-form">
+          <div class="form-group">
+            <div class="input-group py-2">
+              <input
+                placeholder="Username"
+                name="username"
+                type="text"
+                class="form-control username"
+              />
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group">
+              <input
+                placeholder="Password"
+                name="password"
+                type="password"
+                class="form-control"
+              />
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <a
+              href="dashboardAdmin.html"
+              class="btn btn-primary btn-block login-button"
+            >
+              <span class="login-text">Login</span>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="../plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="../plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="../dist/js/pages/dashboard.js"></script>
+  </body>
+</html>
