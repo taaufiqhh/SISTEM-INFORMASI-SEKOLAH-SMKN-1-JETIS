@@ -206,7 +206,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Data Siswa</h1>
+                <h1 class="m-0">Data Akun Siswa</h1>
               </div>
               <!-- /.col -->
               <div class="col-sm-6">
@@ -214,7 +214,7 @@
                   <li class="breadcrumb-item">
                     <a href="dashboardAdmin.html">Dashboard</a>
                   </li>
-                  <li class="breadcrumb-item active">Data Siswa</li>
+                  <li class="breadcrumb-item active">Data Akun Siswa</li>
                 </ol>
               </div>
               <!-- /.col -->
@@ -238,7 +238,7 @@
                         class="btn btn-success mb-2"
                         id="showModalButton"
                       >
-                        Tambah Guru
+                        Tambah Akun
                       </button>
                     </div>
                   </div>
@@ -252,27 +252,21 @@
                           <tr>
                             <th class="align-middle text-center">No</th>
                             <th class="align-middle text-center">NIS</th>
-                            <th class="align-middle text-center">Name</th>
-                            <th class="align-middle text-center">
-                              Tanggal Lahir
-                            </th>
-                            <th class="align-middle text-center">JK</th>
-                            <th class="align-middle text-center">Alamat</th>
-                            <th class="align-middle text-center">Kelas</th>
+                            <th class="align-middle text-center">Nama</th>
+                            <th class="align-middle text-center">Tempat Prakerin</th>
+                            <th class="align-middle text-center">UserId</th>
                             <th class="align-middle text-center">Action</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <td class="align-middle text-center">1</td>
-                            <td class="align-middle text-center">10001</td>
-                            <td class="align-middle text-center">Naruto</td>
-                            <td class="align-middle text-center">25/12/2023</td>
-                            <td class="align-middle text-center">Laki-Laki</td>
+                            <td class="align-middle text-center">NIS Siswa</td>
+                            <td class="align-middle text-center">Nama Siswa</td>
+                            <td class="align-middle text-center">Nama Tempat</td>
                             <td class="align-middle text-center">
-                              Kota Konoha
+                              <span class="badge bg-success">AKTIF</span>
                             </td>
-                            <td class="align-middle text-center">X MM 1</td>
                             <td class="align-middle text-center">
                               <a
                                 href="#"
@@ -309,7 +303,7 @@
                     id="exampleModalLongTitle"
                     v-show="!statusmodal"
                   >
-                    Tambah Siswa
+                    Tambah Akun
                   </h5>
                   <button
                     type="button"
@@ -324,94 +318,85 @@
                   <div class="card card-default">
                     <form>
                       <div class="card-body">
+                        <div class="form-group"></div>
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label>Nama</label>
+                              <select class="form-control select2">
+                                <option disabled value="">-- Pilih --</option>
+                                <option>Nama Siswa</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label>NIS</label>
+                              <select class="form-control select2" disabled>
+                                <option disabled value="">-- Pilih --</option>
+                                <option>NIS Siswa</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="nis"
-                            >NIS:</label
+                          <label class="col-sm-3 col-form-label" for="kelassId"
+                            >Username</label
                           >
                           <div class="col-sm-9">
-                            <input
-                              type="number"
-                              class="form-control"
-                              id="nis"
-                              placeholder="NIS"
-                            />
+                            <input class="form-control" type="text" placeholder="Username">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label
+                            class="col-sm-3 col-form-label"
+                            for="thn_ajaran"
+                            >Tahun Ajaran</label
+                          >
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" placeholder="Password">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" for="userId"
+                            >Tempat Prakerin</label
+                          >
+                          <div class="col-sm-9">
+                            <select class="form-control select2">
+                              <option disabled value="">-- Pilih --</option>
+                              <option>Nama Tempat</option>
+                              <option>Nama Tempat</option>
+                            </select>
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="name"
-                            >Name:</label
-                          >
-                          <div class="col-sm-9">
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="name"
-                              placeholder="Name"
-                            />
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="tgl_lahir"
-                            >Tanggal Lahir:</label
-                          >
-                          <div class="col-sm-9">
-                            <input
-                              type="date"
-                              class="form-control"
-                              id="tgl_lahir"
-                              placeholder="Tanggal Lahir"
-                            />
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label"
-                            >Jenis Kelamin:</label
+                          <label class="col-sm-3 col-form-label" for="userId"
+                            >Status</label
                           >
                           <div class="col-sm-9 mt-2">
                             <label class="mb-0 mr-3">
                               <input
                                 class="mr-1"
                                 type="radio"
-                                name="jks"
-                                id="jks"
-                                value="L"
+                                name="status"
+                                id="status"
+                                value="AKTIF"
                               />
-                              Laki-Laki
+                              AKTIF
                             </label>
                             <label class="mb-0 mr-3">
                               <input
                                 class="mr-1"
                                 type="radio"
-                                name="jks"
-                                id="jks"
-                                value="P"
+                                name="status"
+                                id="status"
+                                value="TIDAK AKTIF"
                               />
-                              Perempuan
+                              TIDAK AKTIF
                             </label>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="alamat"
-                            >Alamat:</label
-                          >
-                          <div class="col-sm-9">
-                            <textarea
-                              type="text"
-                              class="form-control"
-                              id="alamat"
-                              placeholder="Alamat"
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="kelasId"
-                            >Kelas:</label
-                          >
-                          <div class="col-sm-9">
-                            <select class="form-control select2">
-                              <option disabled value="">-- Pilih --</option>
-                              <option>X MM 1</option>
-                            </select>
                           </div>
                         </div>
                       </div>
@@ -462,94 +447,85 @@
                     <!-- form start -->
                     <form>
                       <div class="card-body">
+                        <div class="form-group"></div>
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label>Nama</label>
+                              <select class="form-control select2">
+                                <option disabled value="">-- Pilih --</option>
+                                <option>Nama Siswa</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label>NIS</label>
+                              <select class="form-control select2" disabled>
+                                <option disabled value="">-- Pilih --</option>
+                                <option>NIS Siswa</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="nis"
-                            >NIS:</label
+                          <label class="col-sm-3 col-form-label" for="kelassId"
+                            >Username</label
                           >
                           <div class="col-sm-9">
-                            <input
-                              type="number"
-                              class="form-control"
-                              id="nis"
-                              placeholder="NIS"
-                            />
+                            <input class="form-control" type="text" placeholder="Username">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label
+                            class="col-sm-3 col-form-label"
+                            for="thn_ajaran"
+                            >Tahun Ajaran</label
+                          >
+                          <div class="col-sm-9">
+                            <input class="form-control" type="text" placeholder="Password">
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" for="userId"
+                            >Tempat Prakerin</label
+                          >
+                          <div class="col-sm-9">
+                            <select class="form-control select2">
+                              <option disabled value="">-- Pilih --</option>
+                              <option>Nama Tempat</option>
+                              <option>Nama Tempat</option>
+                            </select>
                           </div>
                         </div>
                         <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="name"
-                            >Name:</label
-                          >
-                          <div class="col-sm-9">
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="name"
-                              placeholder="Name"
-                            />
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="tgl_lahir"
-                            >Tanggal Lahir:</label
-                          >
-                          <div class="col-sm-9">
-                            <input
-                              type="date"
-                              class="form-control"
-                              id="tgl_lahir"
-                              placeholder="Tanggal Lahir"
-                            />
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label"
-                            >Jenis Kelamin:</label
+                          <label class="col-sm-3 col-form-label" for="userId"
+                            >Status</label
                           >
                           <div class="col-sm-9 mt-2">
                             <label class="mb-0 mr-3">
                               <input
                                 class="mr-1"
                                 type="radio"
-                                name="jks"
-                                id="jks"
-                                value="L"
+                                name="status"
+                                id="status"
+                                value="AKTIF"
                               />
-                              Laki-Laki
+                              AKTIF
                             </label>
                             <label class="mb-0 mr-3">
                               <input
                                 class="mr-1"
                                 type="radio"
-                                name="jks"
-                                id="jks"
-                                value="P"
+                                name="status"
+                                id="status"
+                                value="TIDAK AKTIF"
                               />
-                              Perempuan
+                              TIDAK AKTIF
                             </label>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="alamat"
-                            >Alamat:</label
-                          >
-                          <div class="col-sm-9">
-                            <textarea
-                              type="text"
-                              class="form-control"
-                              id="alamat"
-                              placeholder="Alamat"
-                            ></textarea>
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <label class="col-sm-3 col-form-label" for="kelasId"
-                            >Kelas:</label
-                          >
-                          <div class="col-sm-9">
-                            <select class="form-control select2">
-                              <option disabled value="">-- Pilih --</option>
-                              <option>X MM 1</option>
-                            </select>
                           </div>
                         </div>
                       </div>

@@ -206,7 +206,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Profile</h1>
+                <h1 class="m-0">Data Izin</h1>
               </div>
               <!-- /.col -->
               <div class="col-sm-6">
@@ -214,7 +214,7 @@
                   <li class="breadcrumb-item">
                     <a href="dashboardAdmin.html">Dashboard</a>
                   </li>
-                  <li class="breadcrumb-item active">User Profile</li>
+                  <li class="breadcrumb-item active">Data Izin</li>
                 </ol>
               </div>
               <!-- /.col -->
@@ -228,70 +228,48 @@
         <!-- Main content -->
         <section class="content">
           <div class="container-fluid">
-            <div class="col-md-12">
-              <div class="card card-default">
-                <form>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                  </div>
                   <div class="card-body">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="username"
-                        >Username:</label
+                    <div class="table-responsive">
+                      <table
+                        id="myTable"
+                        class="table table-bordered table-hover"
                       >
-                      <div class="col-sm-9">
-                        <p>Administrator</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="tempat_lahir"
-                        >Tempat Lahir:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Kota Konoha</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="tanggal_lahir"
-                        >Tanggal Lahir:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>25/12/2023</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="jenis_kelamin"
-                        >Jenis Kelamin:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Laki-Laki</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="agama"
-                        >Agama:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Islam</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="alamat"
-                        >Alamat:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Kota Konoha</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="no_telp"
-                        >No HP:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>08512345678</p>
-                      </div>
+                        <thead>
+                          <tr>
+                            <th class="align-middle text-center">No</th>
+                            <th class="align-middle text-center">NIS</th>
+                            <th class="align-middle text-center">Siswa</th>
+                            <th class="align-middle text-center">Tanggal</th>
+                            <th class="align-middle text-center">Deskripsi</th>
+                            <th class="align-middle text-center">Foto</th>
+                            <th class="align-middle text-center">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="align-middle text-center">1</td>
+                            <td class="align-middle text-center">NIS</td>
+                            <td class="align-middle text-center">Siswa</td>
+                            <td class="align-middle text-center">Tanggal</td>
+                            <td class="align-middle text-center">Deskripsi</td>
+                            <td class="align-middle text-center"><img src="https://i.pinimg.com/originals/a0/d4/86/a0d486f6a7529d30dbc1638f2cdfd77c.jpg" alt="selfie" height="100px"></td>
+                            <td class="align-middle text-center">
+                              <a href="#" class="badge bg-danger"
+                                ><i class="fas fa-trash-alt"></i
+                              ></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
-              <!-- /.card -->
             </div>
           </div>
         </section>
@@ -348,5 +326,41 @@
     <script src="../dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="../dist/js/pages/dashboard.js"></script>
+    <script>
+      document
+        .getElementById("showModalButton")
+        .addEventListener("click", function () {
+          // Panggil fungsi untuk menampilkan modal
+          showModal();
+        });
+
+      function showModal() {
+        // Dapatkan elemen modal
+        var modal = document.getElementById("modalmuncul");
+
+        // Buat instance modal dengan konstruktor Bootstrap
+        var myModal = new bootstrap.Modal(modal);
+
+        // Tampilkan modal
+        myModal.show();
+      }
+      document
+        .getElementById("showModalButtonEdit")
+        .addEventListener("click", function () {
+          // Panggil fungsi untuk menampilkan modal
+          showModalEdit();
+        });
+
+      function showModalEdit() {
+        // Dapatkan elemen modal
+        var modal = document.getElementById("modalmunculedit");
+
+        // Buat instance modal dengan konstruktor Bootstrap
+        var myModal = new bootstrap.Modal(modal);
+
+        // Tampilkan modal
+        myModal.show();
+      }
+    </script>
   </body>
 </html>

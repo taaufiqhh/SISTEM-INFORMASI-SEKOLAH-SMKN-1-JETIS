@@ -206,7 +206,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Profile</h1>
+                <h1 class="m-0">Data Presensi</h1>
               </div>
               <!-- /.col -->
               <div class="col-sm-6">
@@ -214,7 +214,7 @@
                   <li class="breadcrumb-item">
                     <a href="dashboardAdmin.html">Dashboard</a>
                   </li>
-                  <li class="breadcrumb-item active">User Profile</li>
+                  <li class="breadcrumb-item active">Data Presensi</li>
                 </ol>
               </div>
               <!-- /.col -->
@@ -228,70 +228,56 @@
         <!-- Main content -->
         <section class="content">
           <div class="container-fluid">
-            <div class="col-md-12">
-              <div class="card card-default">
-                <form>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                  </div>
                   <div class="card-body">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="username"
-                        >Username:</label
+                    <div class="table-responsive">
+                      <table
+                        id="myTable"
+                        class="table table-bordered table-hover"
                       >
-                      <div class="col-sm-9">
-                        <p>Administrator</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="tempat_lahir"
-                        >Tempat Lahir:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Kota Konoha</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="tanggal_lahir"
-                        >Tanggal Lahir:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>25/12/2023</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="jenis_kelamin"
-                        >Jenis Kelamin:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Laki-Laki</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="agama"
-                        >Agama:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Islam</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="alamat"
-                        >Alamat:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Kota Konoha</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="no_telp"
-                        >No HP:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>08512345678</p>
-                      </div>
+                        <thead>
+                          <tr>
+                            <th class="align-middle text-center">No</th>
+                            <th class="align-middle text-center">NIS</th>
+                            <th class="align-middle text-center">Siswa</th>
+                            <th class="align-middle text-center">Lokasi Masuk</th>
+                            <th class="align-middle text-center">Lokasi Pulang</th>
+                            <th class="align-middle text-center">Tgl Presensi</th>
+                            <th class="align-middle text-center">Jam Masuk</th>
+                            <th class="align-middle text-center">Jam Pulang</th>
+                            <th class="align-middle text-center">Foto Masuk</th>
+                            <th class="align-middle text-center">Foto Pulang</th>
+                            <th class="align-middle text-center">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="align-middle text-center">1</td>
+                            <td class="align-middle text-center">NIS</td>
+                            <td class="align-middle text-center">Siswa</td>
+                            <td class="align-middle text-center"><a href="https://www.google.com/maps/search/?api=1&query=-7.4024566,112.4505925">Lokasi Masuk</a></td>
+                            <td class="align-middle text-center"><a href="https://www.google.com/maps/search/?api=1&query=-7.4024566,112.4505925">Lokasi Pulang</a></td>
+                            <td class="align-middle text-center">Tgl Presensi</td>
+                            <td class="align-middle text-center">Jam Masuk</td>
+                            <td class="align-middle text-center">Jam Pulang</td>
+                            <td class="align-middle text-center"><img src="https://images.unsplash.com/photo-1616158010479-e18030dffc1e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VsZiUyMHBvcnRyYWl0fGVufDB8fDB8fHww" alt="selfie" height="100px"></td>
+                            <td class="align-middle text-center"><img src="https://images.unsplash.com/photo-1616158010479-e18030dffc1e?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2VsZiUyMHBvcnRyYWl0fGVufDB8fDB8fHww" alt="selfie" height="100px"></td>
+                            <td class="align-middle text-center">
+                              <a href="#" class="badge bg-danger"
+                                ><i class="fas fa-trash-alt"></i
+                              ></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
-              <!-- /.card -->
             </div>
           </div>
         </section>
@@ -348,5 +334,41 @@
     <script src="../dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="../dist/js/pages/dashboard.js"></script>
+    <script>
+      document
+        .getElementById("showModalButton")
+        .addEventListener("click", function () {
+          // Panggil fungsi untuk menampilkan modal
+          showModal();
+        });
+
+      function showModal() {
+        // Dapatkan elemen modal
+        var modal = document.getElementById("modalmuncul");
+
+        // Buat instance modal dengan konstruktor Bootstrap
+        var myModal = new bootstrap.Modal(modal);
+
+        // Tampilkan modal
+        myModal.show();
+      }
+      document
+        .getElementById("showModalButtonEdit")
+        .addEventListener("click", function () {
+          // Panggil fungsi untuk menampilkan modal
+          showModalEdit();
+        });
+
+      function showModalEdit() {
+        // Dapatkan elemen modal
+        var modal = document.getElementById("modalmunculedit");
+
+        // Buat instance modal dengan konstruktor Bootstrap
+        var myModal = new bootstrap.Modal(modal);
+
+        // Tampilkan modal
+        myModal.show();
+      }
+    </script>
   </body>
 </html>
