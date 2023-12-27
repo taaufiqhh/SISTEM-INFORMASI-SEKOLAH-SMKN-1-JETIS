@@ -206,7 +206,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Dashboard</h1>
+                <h1 class="m-0">Data Tempat Prakerin</h1>
               </div>
               <!-- /.col -->
               <div class="col-sm-6">
@@ -214,7 +214,7 @@
                   <li class="breadcrumb-item">
                     <a href="dashboardAdmin.html">Dashboard</a>
                   </li>
-                  <li class="breadcrumb-item active">Dashboard</li>
+                  <li class="breadcrumb-item active">Data Tempat Prakerin</li>
                 </ol>
               </div>
               <!-- /.col -->
@@ -229,84 +229,220 @@
         <section class="content">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-3 col-6">
-                <!-- small box -->
-                <div class="small-box bg-info">
-                  <div class="inner">
-                    <h3>22</h3>
-
-                    <p>Users</p>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="card-tools">
+                      <button
+                        type="button"
+                        class="btn btn-success mb-2"
+                        id="showModalButton"
+                      >
+                        Tambah Tempat
+                      </button>
+                    </div>
                   </div>
-                  <div class="icon">
-                    <i class="fas fa-user-plus"></i>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table
+                        id="myTable"
+                        class="table table-bordered table-hover"
+                      >
+                        <thead>
+                          <tr>
+                            <th class="align-middle text-center">No</th>
+                            <th class="align-middle text-center">Tempat Prakerin</th>
+                            <th class="align-middle text-center">Lokasi</th>
+                            <th class="align-middle text-center">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="align-middle text-center">1</td>
+                            <td class="align-middle text-center">Nama Tempat</td>
+                            <td class="align-middle text-center">Lokasi</td>
+                            <td class="align-middle text-center">
+                              <a
+                                href="#"
+                                id="showModalButtonEdit"
+                                class="badge bg-info mr-2"
+                                ><i class="fas fa-edit"></i
+                              ></a>
+                              <a href="#" class="badge bg-danger"
+                                ><i class="fas fa-trash-alt"></i
+                              ></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                  <a href="halamanTableUser.html" class="small-box-footer">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <div class="small-box bg-success">
-                  <div class="inner">
-                    <h3>346</h3>
-
-                    <p>Siswa</p>
-                  </div>
-                  <div class="icon">
-                    <i class="fas fa-user-friends"></i>
-                  </div>
-                  <a href="halamanTableSiswa.html" class="small-box-footer">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <div class="small-box bg-warning">
-                  <div class="inner">
-                    <h3>98</h3>
-
-                    <p>Guru</p>
-                  </div>
-                  <div class="icon">
-                    <i class="fas fa-users"></i>
-                  </div>
-                  <a href="halamanTableGuru.html" class="small-box-footer">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="col-lg-3 col-6">
-                <div class="small-box bg-danger">
-                  <div class="inner">
-                    <h3>56</h3>
-
-                    <p>Wali kelas</p>
-                  </div>
-                  <div class="icon">
-                    <i class="fas fa-user-tie"></i>
-                  </div>
-                  <a href="halamanTableWalas.html" class="small-box-footer">
-                    More info <i class="fas fa-arrow-circle-right"></i>
-                  </a>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <!-- Left col -->
-              <section class="col-lg-7 connectedSortable">
-                <div class="card">
-                  <div class="card-header">
-                    <h3 class="card-title">Admin</h3>
-                  </div>
-                  <div class="card-body">
-                    <p class="welcome-msg">
-                      Selamat Datang <strong> Pengguna Admin </strong>, Anda
-                      Login Sebagai
-                      <strong>Admin</strong>
-                    </p>
+          </div>
+          <div
+            class="modal fade"
+            id="modalmuncul"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="modalmuncul1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title"
+                    id="exampleModalLongTitle"
+                    v-show="!statusmodal"
+                  >
+                    Tambah Tempat
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="card card-default">
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form>
+                      <div class="card-body">
+                        <div class="form-group row">
+                          <label class="col-sm col-form-label" for="username"
+                            >Nama Tempat Prakerin</label
+                          >
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="tempatpkl"
+                              placeholder="Nama Tempat Prakerin"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm col-form-label" for="username"
+                            >Lokasi</label
+                          >
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="lokasi"
+                              placeholder="Lokasi Tempat Prakerin"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                          Simpan
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
-              </section>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="modalmunculedit"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="modalmuncul1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title"
+                    id="exampleModalLongTitle"
+                    v-show="!statusmodal"
+                  >
+                    Ubah Data
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="card card-default">
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form>
+                      <div class="card-body">
+                        <div class="form-group row">
+                          <label class="col-sm col-form-label" for="username"
+                            >Nama Tempat Prakerin</label
+                          >
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="tempatpkl"
+                              placeholder="Nama Tempat Prakerin"
+                            />
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm col-form-label" for="username"
+                            >Lokasi</label
+                          >
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="lokasi"
+                              placeholder="Lokasi Tempat Prakerin"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="submit" class="btn btn-success">
+                          Ubah
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -363,5 +499,41 @@
     <script src="../dist/js/demo.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="../dist/js/pages/dashboard.js"></script>
+    <script>
+      document
+        .getElementById("showModalButton")
+        .addEventListener("click", function () {
+          // Panggil fungsi untuk menampilkan modal
+          showModal();
+        });
+
+      function showModal() {
+        // Dapatkan elemen modal
+        var modal = document.getElementById("modalmuncul");
+
+        // Buat instance modal dengan konstruktor Bootstrap
+        var myModal = new bootstrap.Modal(modal);
+
+        // Tampilkan modal
+        myModal.show();
+      }
+      document
+        .getElementById("showModalButtonEdit")
+        .addEventListener("click", function () {
+          // Panggil fungsi untuk menampilkan modal
+          showModalEdit();
+        });
+
+      function showModalEdit() {
+        // Dapatkan elemen modal
+        var modal = document.getElementById("modalmunculedit");
+
+        // Buat instance modal dengan konstruktor Bootstrap
+        var myModal = new bootstrap.Modal(modal);
+
+        // Tampilkan modal
+        myModal.show();
+      }
+    </script>
   </body>
 </html>
