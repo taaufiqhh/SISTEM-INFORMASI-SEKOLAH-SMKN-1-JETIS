@@ -97,37 +97,43 @@
               data-accordion="false"
             >
               <li class="nav-item">
-                <a href="dashboardGuru.html" class="nav-link">
+                <a href="dashboardWalas.html" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>Dashboard</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="profileGuru.html" class="nav-link">
+                <a href="profileWalas.html" class="nav-link">
                   <i class="nav-icon fa fa-user"></i>
                   <p>Profile</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="halamanTableNilaiPengetahuan.html" class="nav-link">
-                  <i class="nav-icon far fa-address-card"></i>
-                  <p>Data Nilai Pengetahuan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="halamanTableNilaiKetrampilan.html" class="nav-link">
-                  <i class="nav-icon far fa-address-card"></i>
-                  <p>Data Nilai Ketrampilan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="halamanSiswa.html" class="nav-link">
+                <a href="halamanSiswaWalas.html" class="nav-link">
                   <i class="nav-icon fa fa-users"></i>
                   <p>Siswa</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="LoginGuru.html" class="nav-link">
+                <a
+                  href="halamanTableNilaiPengetahuanWalas.html"
+                  class="nav-link"
+                >
+                  <i class="nav-icon far fa-address-card"></i>
+                  <p>Nilai Pengetahuan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="halamanTableNilaiKetrampilanWalas.html"
+                  class="nav-link"
+                >
+                  <i class="nav-icon far fa-address-card"></i>
+                  <p>Nilai Ketrampilan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="LoginWalas.html" class="nav-link">
                   <i class="nav-icon fas fa-sign-out-alt"></i>
                   <p>Logout</p>
                 </a>
@@ -146,15 +152,15 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Profile</h1>
+                <h1 class="m-0">Siswa</h1>
               </div>
               <!-- /.col -->
               <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                   <li class="breadcrumb-item">
-                    <a href="dashboardGuru.html">Dashboard</a>
+                    <a href="dashboardWalas.html">Dashboard</a>
                   </li>
-                  <li class="breadcrumb-item active">User Profile</li>
+                  <li class="breadcrumb-item active">Siswa</li>
                 </ol>
               </div>
               <!-- /.col -->
@@ -168,94 +174,67 @@
         <!-- Main content -->
         <section class="content">
           <div class="container-fluid">
-            <div class="col-md-12">
-              <div class="card card-default">
-                <form>
-                  <div class="card-body">
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="username"
-                        >Username:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Guru</p>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title"></h3>
+                  </div>
+                  <form>
+                    <div class="card-body">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="nip"
+                          >NIP:</label
+                        >
+                        <div class="col-sm-9">
+                          <p v-if="users.wala">100001</p>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="nama"
+                          >Nama:</label
+                        >
+                        <div class="col-sm-9">
+                          <p v-if="users.wala">Guruu</p>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="kelas"
+                          >Kelas:</label
+                        >
+                        <div class="col-sm-9">
+                          <p v-if="users.wala">X MM 1</p>
+                        </div>
                       </div>
                     </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="NIP"
-                        >NIP:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>10001</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="Nama"
-                        >Nama:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Guruu</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="tempat_lahir"
-                        >Tempat Lahir:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Kota Konoha</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="tanggal_lahir"
-                        >Tanggal Lahir:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>25/12/2023</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="jenis_kelamin"
-                        >Jenis Kelamin:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Laki-Laki</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="agama"
-                        >Agama:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Islam</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="alamat"
-                        >Alamat:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Kota Konoha</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="no_telp"
-                        >No HP:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>08512345678</p>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label class="col-sm-3 col-form-label" for="name_mapel"
-                        >Mengajar Mata Pelajaran:</label
-                      >
-                      <div class="col-sm-9">
-                        <p>Bahasa Indonesia</p>
+                  </form>
+                  <div v-if="users.wala && users.wala.kelas.siswa">
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table
+                          id="myTable"
+                          class="table table-bordered table-hover"
+                        >
+                          <thead>
+                            <tr>
+                              <th class="align-middle text-center">No</th>
+                              <th class="align-middle text-center">NIS</th>
+                              <th class="align-middle text-center">Nama</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="align-middle text-center">1</td>
+                              <td class="align-middle text-center">1001</td>
+                              <td class="align-middle text-center">Naruto</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
-              <!-- /.card -->
             </div>
           </div>
         </section>

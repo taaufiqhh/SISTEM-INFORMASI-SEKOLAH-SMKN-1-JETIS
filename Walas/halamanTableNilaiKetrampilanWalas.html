@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMKN 1 JETIS MOJOKERTO</title>
+    <link
+      rel="icon"
+      href="https://dindik.jatimprov.go.id/pak/images/foto/d0ec693900068c4c4890f179c3e064dalogo%20smk.png"
+    />
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css" />
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+    />
+    <!-- iCheck -->
+    <link
+      rel="stylesheet"
+      href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css" />
+    <!-- overlayScrollbars -->
+    <link
+      rel="stylesheet"
+      href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css"
+    />
+    <!-- Daterange picker -->
+    <link
+      rel="stylesheet"
+      href="../plugins/daterangepicker/daterangepicker.css"
+    />
+    <!-- summernote -->
+    <link
+      rel="stylesheet"
+      href="../plugins/summernote/summernote-bs4.min.css"
+    />
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <!-- <a href="index3.html" class="brand-link">
+      <span class="brand-text font-weight-light">SMKN 1 JETIS MOJOKERTO</span>
+    </a> -->
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img
+                src="https://dindik.jatimprov.go.id/pak/images/foto/d0ec693900068c4c4890f179c3e064dalogo%20smk.png"
+              />
+            </div>
+            <div class="info">
+              <a
+                href="dashboardAdmin.html"
+                class="d-block mt-1"
+                style="font-size: 14px"
+                >SMKN 1 JETIS MOJOKERTO</a
+              >
+            </div>
+          </div>
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <li class="nav-item">
+                <a href="dashboardWalas.html" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="profileWalas.html" class="nav-link">
+                  <i class="nav-icon fa fa-user"></i>
+                  <p>Profile</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="halamanSiswaWalas.html" class="nav-link">
+                  <i class="nav-icon fa fa-users"></i>
+                  <p>Siswa</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="halamanTableNilaiPengetahuanWalas.html"
+                  class="nav-link"
+                >
+                  <i class="nav-icon far fa-address-card"></i>
+                  <p>Nilai Pengetahuan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="halamanTableNilaiKetrampilanWalas.html"
+                  class="nav-link"
+                >
+                  <i class="nav-icon far fa-address-card"></i>
+                  <p>Nilai Ketrampilan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="LoginWalas.html" class="nav-link">
+                  <i class="nav-icon fas fa-sign-out-alt"></i>
+                  <p>Logout</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0">Nilai Ketrampilan</h1>
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item">
+                    <a href="dashboardWalas.html">Dashboard</a>
+                  </li>
+                  <li class="breadcrumb-item active">Nilai Ketrampilan</li>
+                </ol>
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title"></h3>
+                  </div>
+                  <form>
+                    <div class="card-body">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="nip"
+                          >NIP:</label
+                        >
+                        <div class="col-sm-9">
+                          <p>10001</p>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="nama"
+                          >Nama:</label
+                        >
+                        <div class="col-sm-9">
+                          <p>Wali Kelas</p>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="kelas"
+                          >Kelas:</label
+                        >
+                        <div class="col-sm-9">
+                          <p>X MM 1</p>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="mapel"
+                          >Pilih Mata Pelajaran:</label
+                        >
+                        <div class="col-sm-9">
+                          <select class="form-control select2">
+                            <option>Bahasa Indonesia - Guruu</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div v-if="selectedMapel && selectedMapel.kelas">
+                    <div v-for="kelas in selectedMapel.kelas" :key="kelas.id">
+                      <div class="card-header">
+                        <!-- <h3 class="card-title">Kelas: {{ kelas.name_kelas }}</h3> -->
+                        <div class="card-tools">
+                          <button
+                            type="button"
+                            class="btn btn-success mb-2"
+                            @click="showModal"
+                          >
+                            <i class="fas fa-print"></i>
+                            Cetak PDF
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table
+                            id="myTable"
+                            class="table table-bordered table-hover"
+                          >
+                            <thead>
+                              <tr>
+                                <th colspan="32" class="text-center">
+                                  Nilai Ketrampilan
+                                </th>
+                              </tr>
+                              <tr>
+                                <th rowspan="2" class="align-middle">No</th>
+                                <th
+                                  rowspan="2"
+                                  class="align-middle text-center"
+                                >
+                                  NIS
+                                </th>
+                                <th
+                                  rowspan="2"
+                                  class="align-middle text-center"
+                                >
+                                  Siswa
+                                </th>
+                                <th colspan="8" class="text-center">Proses</th>
+                                <th colspan="8" class="text-center">Proyek</th>
+                                <th colspan="8" class="text-center">Produk</th>
+                              </tr>
+                              <tr>
+                                <th class="text-center">1</th>
+                                <th class="text-center">2</th>
+                                <th class="text-center">3</th>
+                                <th class="text-center">4</th>
+                                <th class="text-center">5</th>
+                                <th class="text-center">6</th>
+                                <th class="text-center">7</th>
+                                <th class="text-center">8</th>
+                                <th class="text-center">1</th>
+                                <th class="text-center">2</th>
+                                <th class="text-center">3</th>
+                                <th class="text-center">4</th>
+                                <th class="text-center">5</th>
+                                <th class="text-center">6</th>
+                                <th class="text-center">7</th>
+                                <th class="text-center">8</th>
+                                <th class="text-center">1</th>
+                                <th class="text-center">2</th>
+                                <th class="text-center">3</th>
+                                <th class="text-center">4</th>
+                                <th class="text-center">5</th>
+                                <th class="text-center">6</th>
+                                <th class="text-center">7</th>
+                                <th class="text-center">8</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="align-middle text-center">1</td>
+                                <td class="align-middle text-center">1001</td>
+                                <td class="align-middle text-center">Naruto</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                                <td class="align-middle text-center">90</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="modalmuncul"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="modalmuncul1"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title"
+                    id="exampleModalLongTitle"
+                    v-show="statusmodal"
+                  >
+                    Cetak
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div id="cetakPDFnilaiketrampilan">
+                    <div class="card card-default">
+                      <form>
+                        <div class="card-body">
+                          <h1 class="text-center p-2 pb-4">
+                            Daftar Nilai Ketrampilan
+                          </h1>
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="nip"
+                              >NIP</label
+                            >
+                            <div class="col-sm-9">
+                              <p>: 100001</p>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="nama"
+                              >Nama</label
+                            >
+                            <div class="col-sm-9">
+                              <p>: Wali Kelas</p>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="kelas"
+                              >Kelas</label
+                            >
+                            <div class="col-sm-9">
+                              <p>: X MM 1</p>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="mapel"
+                              >Mata Pelajaran</label
+                            >
+                            <div class="col-sm-9">
+                              <div v-if="selectedMapel">
+                                <p>: Bahasa Indonesia - Guruu</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                      <div v-if="selectedMapel && selectedMapel.kelas">
+                        <div
+                          v-for="kelas in selectedMapel.kelas"
+                          :key="kelas.id"
+                        >
+                          <div class="card-header">
+                            <!-- <h3 class="card-title">Kelas: {{ kelas.name_kelas }}</h3> -->
+                          </div>
+                          <div class="card-body">
+                            <div class="table-responsive">
+                              <table class="custom">
+                                <tr>
+                                  <th
+                                    colspan="32"
+                                    class="text-center th-custom"
+                                  >
+                                    Nilai Ketrampilan
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <th
+                                    rowspan="2"
+                                    class="align-middle th-custom"
+                                  >
+                                    No
+                                  </th>
+                                  <th
+                                    rowspan="2"
+                                    class="align-middle text-center th-custom"
+                                  >
+                                    NIS
+                                  </th>
+                                  <th
+                                    rowspan="2"
+                                    class="align-middle text-center th-custom"
+                                  >
+                                    Siswa
+                                  </th>
+                                  <th colspan="8" class="text-center th-custom">
+                                    Proses
+                                  </th>
+                                  <th colspan="8" class="text-center th-custom">
+                                    Proyek
+                                  </th>
+                                  <th colspan="8" class="text-center th-custom">
+                                    Produk
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <th class="text-center th-custom">1</th>
+                                  <th class="text-center th-custom">2</th>
+                                  <th class="text-center th-custom">3</th>
+                                  <th class="text-center th-custom">4</th>
+                                  <th class="text-center th-custom">5</th>
+                                  <th class="text-center th-custom">6</th>
+                                  <th class="text-center th-custom">7</th>
+                                  <th class="text-center th-custom">8</th>
+                                  <th class="text-center th-custom">1</th>
+                                  <th class="text-center th-custom">2</th>
+                                  <th class="text-center th-custom">3</th>
+                                  <th class="text-center th-custom">4</th>
+                                  <th class="text-center th-custom">5</th>
+                                  <th class="text-center th-custom">6</th>
+                                  <th class="text-center th-custom">7</th>
+                                  <th class="text-center th-custom">8</th>
+                                  <th class="text-center th-custom">1</th>
+                                  <th class="text-center th-custom">2</th>
+                                  <th class="text-center th-custom">3</th>
+                                  <th class="text-center th-custom">4</th>
+                                  <th class="text-center th-custom">5</th>
+                                  <th class="text-center th-custom">6</th>
+                                  <th class="text-center th-custom">7</th>
+                                  <th class="text-center th-custom">8</th>
+                                </tr>
+                                <tr
+                                  v-for="(child, index) in kelas.siswa"
+                                  :key="child.id"
+                                >
+                                  <td
+                                    class="align-middle text-center td-custom"
+                                  >
+                                    {{ index + 1 }}
+                                  </td>
+                                  <td
+                                    class="align-middle text-center td-custom"
+                                  >
+                                    {{ child.nis }}
+                                  </td>
+                                  <td
+                                    class="align-middle text-center td-custom"
+                                  >
+                                    {{ child.name }}
+                                  </td>
+                                  <td
+                                    v-for="i in 8"
+                                    :key="i"
+                                    class="align-middle text-center td-custom"
+                                  >
+                                    {{ getNilaiNK( child.id, selectedMapel.id,
+                                    "proses", i ) }}
+                                  </td>
+                                  <td
+                                    v-for="i in 8"
+                                    :key="i"
+                                    class="align-middle text-center td-custom"
+                                  >
+                                    {{ getNilaiNK( child.id, selectedMapel.id,
+                                    "proyek", i ) }}
+                                  </td>
+                                  <td
+                                    v-for="i in 8"
+                                    :key="i"
+                                    class="align-middle text-center td-custom"
+                                  >
+                                    {{ getNilaiNK( child.id, selectedMapel.id,
+                                    "produk", i ) }}
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    :disabled="disabled"
+                    v-show="!statusmodal"
+                    @click="exportToPDF"
+                  >
+                    <i v-show="loading" class="fa fa-spinner fa-spin"></i>
+                    Cetak
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- /.content-wrapper -->
+      <footer class="main-footer">
+        <div class="float-right d-none d-sm-block"></div>
+        <strong
+          >Copyright &copy; 2023
+          <a href="https://smkn1jetis.sch.id/">SMKN 1 JETIS MOJOKERTO</a
+          >.</strong
+        >
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+      $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="../plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="../plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="../plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="../plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="../plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="../plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="../plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="../dist/js/pages/dashboard.js"></script>
+  </body>
+</html>
